@@ -28,8 +28,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(51, 51, 51, 0.8);
-    padding: 1vh 2vw; /* Responsive padding */
+    background-color: #9b8868de;
+    padding: 1vh 2vw; 
     position: fixed;
     top: 0;
     left: 0;
@@ -39,36 +39,36 @@ header {
     font-size: 1vw;
 }
 
-/* Style for the logo (title) */
+
 #logo {
-    font-size: 1.8rem; /* Relative unit for better scaling */
+    font-size: 1.8rem; 
 }
 
-/* Style for the Navigation */
+
 nav ul {
     list-style: none;
     display: flex;
-    gap: 2vw; /* Spacing between the links using viewport width */
+    gap: 2vw; 
 }
 
-/* Style for individual navigation links */
+
 nav a.navbutton {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem; /* Relative font size */
+    font-size: 1.2rem; 
 }
 
-/* Optional: Change link color on hover */
+
 nav a.navbutton:hover {
     text-decoration: underline;
 }
 
-/* Add margin to the body to avoid content being hidden under the fixed header */
+
 main {
-    margin-top: 8vh; /* Adjust this based on the actual height of the header */
+    margin-top: 8vh; 
 }
 
-/* Ensure the main container is centered if needed */
+
 main {
     display: flex;
     flex-direction: column;
@@ -78,15 +78,15 @@ main {
     padding-right: 5%;
 }
 
-/* Center the .introduction section */
+
 .introduction {
-    max-width: 80vw; /* Limit width to ensure readability */
+    max-width: 80vw; 
     text-align: center;
     margin: 0 auto;
     padding: 2vw;
 }
 
-/* Additional styling for grid layout */
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -104,46 +104,51 @@ main {
 .section-image {
     width: 80%;
     height: auto;
-    max-height: 30vw; /* Set maximum height for the images to ensure equal size */
-    object-fit: cover; /* Ensures the image fits the container without distortion */
+    max-height: 30vw; 
+    object-fit: cover; 
     border-radius: 0.8rem;
+    margin-top:2vw;
+    margin-bottom: 1vw;
 }
 
-/* Responsive grid layout */
+
 @media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+        grid-template-columns: 1fr; 
     }
 }
 
-/* Style for larger images */
+
 .largeimage {
     text-align: center;
-    margin: 2vh 0;
+    margin-top:-10vw 0;
+    margin-bottom: 3vw;
+
 }
 
 .largeimage img {
     height: auto;
-    max-height: 40vw; /* Scale height based on viewport height */
+    max-height: 40vw; 
     width: auto;
-    max-width: 100%; /* Prevent the image from exceeding container width */
+    max-width: 100%; 
     border-radius: 0.5rem;
     box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+    margin-top: -5vw
 }
 
 .gallery {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 1vw; /* Responsive gap between images */
+    gap: 1vw; 
     justify-content: center;
     padding: 1vh;
 }
 
 .gallery-item {
     flex: 0 0 auto;
-    width: 6vw; /* Set width using viewport width */
-    height: 4vw; /* Set height using viewport width to maintain aspect ratio */
+    width: 6vw; 
+    height: 4vw; 
     cursor: pointer;
     border: 0.2rem solid transparent;
     border-radius: 0.8rem;
@@ -160,24 +165,22 @@ main {
     transition: transform 0.3s ease;
 }
 
-/* Enlarged selected item style */
-.gallery-item.selected {
-    width: 8vw; /* Increased width for the selected item */
-    height: 6vw; /* Increased height for the selected item */
+
+    width: 8vw; 
+    height: 6vw; 
     opacity: 1;
 }
 
 .gallery-item.selected img {
-    transform: scale(1.2); /* Slightly enlarge the selected image */
+    transform: scale(1.2); 
     width: 100%;
     height: 100%;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .gallery-item {
-        width: 5vw; /* Smaller images on smaller screens */
-        height: 4vw;
+        width: 5vw; 
     }
 
     .largeimage img {
@@ -187,7 +190,7 @@ main {
 
 @media (max-width: 480px) {
     .gallery-item {
-        width: 4vw; /* Even smaller images on very small screens */
+        width: 4vw; 
         height: 3vw;
     }
 
@@ -196,7 +199,7 @@ main {
     }
 }
 
-/* Form Styling */
+
 form {
     display: flex;
     flex-direction: column;
@@ -205,7 +208,7 @@ form {
     margin: 0 auto;
     padding: 2vw;
     width: 70vw;
-    background-color: #d6d6d6;
+    background-color: #c2b090;
     border-radius: 1rem;
 }
 
@@ -220,15 +223,41 @@ form input, form textarea {
 footer {
     position:relative;
     width: 100vw;
-    margin: 0;
+    margin-top: 6vw;
     padding: 0;
-    color: rgb(0, 0, 0); /* Optional: text color */
+    color: rgb(236, 236, 236); 
     text-align: left;
-    background-color: #d6d6d6;
+    background-color: #c2b090;
     border-top: #000000;
-    font-family: sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.5vw;
 }
 
-h3 {font-weight: normal;}
 
-h4 {font-weight: normal;}
+.navbutton {
+    color: darkgrey; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+
+.navbutton:link, 
+.navbutton:visited,
+.navbutton:hover, 
+.navbutton:active { 
+    color: rgb(236, 236, 236); 
+}
+
+/* Optional: add hover effect if needed */
+.navbutton:hover {
+    text-decoration: underline; /* Optional: add underline on hover */
+}
+
+
+h2 {margin-bottom: 1vw;}
+
+h3 {font-weight: normal;
+font-size: 0.9vw;}
+
+h4 {font-weight: normal;
+font-size: 0.8vw}
