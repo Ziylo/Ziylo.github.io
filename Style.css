@@ -1,0 +1,234 @@
+body {
+    font-family: Helvetica, Arial, Sans-serif
+    margin: 0;
+    width: 100vw;
+    height: 100vw;
+
+    line-height: 1.5;
+    background-color: #fff9ef;
+    font-size: 1vw;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    position: fixed;
+    width: 100vw;
+    font-family: marienda;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 1vh 2vw; /* Responsive padding */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    color: white;
+    font-size: 1vw;
+}
+
+/* Style for the logo (title) */
+#logo {
+    font-size: 1.8rem; /* Relative unit for better scaling */
+}
+
+/* Style for the Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2vw; /* Spacing between the links using viewport width */
+}
+
+/* Style for individual navigation links */
+nav a.navbutton {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem; /* Relative font size */
+}
+
+/* Optional: Change link color on hover */
+nav a.navbutton:hover {
+    text-decoration: underline;
+}
+
+/* Add margin to the body to avoid content being hidden under the fixed header */
+main {
+    margin-top: 8vh; /* Adjust this based on the actual height of the header */
+}
+
+/* Ensure the main container is centered if needed */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/* Center the .introduction section */
+.introduction {
+    max-width: 80vw; /* Limit width to ensure readability */
+    text-align: center;
+    margin: 0 auto;
+    padding: 2vw;
+}
+
+/* Additional styling for grid layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    margin-top: 2vh;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.section-image {
+    width: 80%;
+    height: auto;
+    max-height: 30vw; /* Set maximum height for the images to ensure equal size */
+    object-fit: cover; /* Ensures the image fits the container without distortion */
+    border-radius: 0.8rem;
+}
+
+/* Responsive grid layout */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+}
+
+/* Style for larger images */
+.largeimage {
+    text-align: center;
+    margin: 2vh 0;
+}
+
+.largeimage img {
+    height: auto;
+    max-height: 40vw; /* Scale height based on viewport height */
+    width: auto;
+    max-width: 100%; /* Prevent the image from exceeding container width */
+    border-radius: 0.5rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1vw; /* Responsive gap between images */
+    justify-content: center;
+    padding: 1vh;
+}
+
+.gallery-item {
+    flex: 0 0 auto;
+    width: 6vw; /* Set width using viewport width */
+    height: 4vw; /* Set height using viewport width to maintain aspect ratio */
+    cursor: pointer;
+    border: 0.2rem solid transparent;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    opacity: 0.7;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+/* Enlarged selected item style */
+.gallery-item.selected {
+    width: 8vw; /* Increased width for the selected item */
+    height: 6vw; /* Increased height for the selected item */
+    opacity: 1;
+}
+
+.gallery-item.selected img {
+    transform: scale(1.2); /* Slightly enlarge the selected image */
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 5vw; /* Smaller images on smaller screens */
+        height: 4vw;
+    }
+
+    .largeimage img {
+        max-width: 60vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 4vw; /* Even smaller images on very small screens */
+        height: 3vw;
+    }
+
+    .largeimage img {
+        max-width: 100vw;
+    }
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 2vw;
+    width: 70vw;
+    background-color: #d6d6d6;
+    border-radius: 1rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #ccc;
+}
+
+footer {
+    position:relative;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0); /* Optional: text color */
+    text-align: left;
+    background-color: #d6d6d6;
+    border-top: #000000;
+    font-family: sans-serif;
+}
+
+h3 {font-weight: normal;}
+
+h4 {font-weight: normal;}
