@@ -249,9 +249,9 @@ footer {
     color: rgb(236, 236, 236); 
 }
 
-/* Optional: add hover effect if needed */
+
 .navbutton:hover {
-    text-decoration: underline; /* Optional: add underline on hover */
+    text-decoration: underline; 
 }
 
 
